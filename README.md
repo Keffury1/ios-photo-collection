@@ -116,7 +116,8 @@ Now, we're going to use the `ThemeHelper` class to let us know what theme the us
     - Get the current `themePreference` from the `themeHelper`. Make sure that it has a value, or return out of the function.
     - Based on the value, change the collection view's background color depending on whether the theme is dark or the other color you selected.
 
-6. Implement the `prepareForSegue`. You should have three segues to handle.      
+6. Implement the `prepareForSegue`. You should have three segues to handle.   
+//NEEDS WORK//
     - The segue from the cell should pass the `themeHelper`, `photoController`, and the `photo`.
     - The segue from the "Add" bar button item should pass the the `themeHelper` and the `photoController`.
     - The segue from the "Select Theme" bar button item should pass the `themeHelper`.

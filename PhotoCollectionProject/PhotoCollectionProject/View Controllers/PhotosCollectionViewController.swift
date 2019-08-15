@@ -11,6 +11,10 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class PhotosCollectionViewController: UICollectionViewController {
+    
+    let photoController = PhotoController()
+    
+    let themeHelper = ThemeHelper()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,35 +28,48 @@ class PhotosCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "photoCellSegue" {
+            guard let photoDetailVC = segue.destination as? PhotoDetailViewController else { return }
+            // NEEDS WORK.
+        } else if segue.identifier == "addPhotoSegue" {
+            guard let addPhotoVC = segue.destination as? PhotoDetailViewController else { return }
+            // NEEDS WORK.
+        } else if segue.identifier == "selectThemeModalSegue" {
+            guard let selectThemeVC = segue.destination as? ThemeSelectionViewController else { return }
+            // NEEDS WORK.
+        }
     }
-    */
+ 
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return photoController.photos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell else { return UICollectionViewCell() }
+        
+        let photo = photoController.photos[indexPath.item]
+        cell.photo = photo
     
         return cell
+    }
+    
+    func setTheme() {
+        guard let themePreference = themeHelper.themePreference else { return }
+        if themePreference == "Dark" {
+            self.collectionView.backgroundColor = .lightGray
+        } else {
+            self.collectionView.backgroundColor = .white
+        }
+        
     }
 
     // MARK: UICollectionViewDelegate
