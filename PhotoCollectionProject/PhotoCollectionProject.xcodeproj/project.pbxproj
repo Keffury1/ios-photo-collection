@@ -14,6 +14,7 @@
 		375671BC2305BFDC008B8533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375671BA2305BFDC008B8533 /* LaunchScreen.storyboard */; };
 		375671C92305C0A6008B8533 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375671C82305C0A6008B8533 /* Photo.swift */; };
 		375671CB2305C1D1008B8533 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375671CA2305C1D1008B8533 /* PhotoController.swift */; };
+		375671CD2305C476008B8533 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375671CC2305C476008B8533 /* ThemeHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		375671BD2305BFDC008B8533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		375671C82305C0A6008B8533 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		375671CA2305C1D1008B8533 /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
+		375671CC2305C476008B8533 /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		375671C32305BFE6008B8533 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				375671CC2305C476008B8533 /* ThemeHelper.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				375671C92305C0A6008B8533 /* Photo.swift in Sources */,
 				375671B42305BFDB008B8533 /* ViewController.swift in Sources */,
 				375671CB2305C1D1008B8533 /* PhotoController.swift in Sources */,
+				375671CD2305C476008B8533 /* ThemeHelper.swift in Sources */,
 				375671B22305BFDB008B8533 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
