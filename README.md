@@ -117,6 +117,7 @@ Now, we're going to use the `ThemeHelper` class to let us know what theme the us
     - Based on the value, change the collection view's background color depending on whether the theme is dark or the other color you selected.
 
 6. Implement the `prepareForSegue`. You should have three segues to handle.   
+
 //NEEDS WORK//
     - The segue from the cell should pass the `themeHelper`, `photoController`, and the `photo`.
     - The segue from the "Add" bar button item should pass the the `themeHelper` and the `photoController`.
@@ -130,6 +131,8 @@ This view controller will allow the user to (re)select their desired theme.
 2. Do the same thing for the other action, but calling the other `setThemePreference` method in the `themeHelper`.
 
 #### PhotoDetailViewController
+
+//NEEDS WORK//
 
 1. Create a `setTheme` function. This should do the same thing as the `setTheme` method in your collection view controller, except that it should change the view controller's `view`'s background color instead.
 2. Create an `updateViews` function. Call the `setTheme` function at the first of this function. that takes the values in the `photo` (if it isn't `nil`) and sets them in the appropriate UI element. You will need to use the `UIImage(data: Data)` initializer to convert the `photo`'s `imageData` to a `UIImage`. You can then put that `UIImage` in the image view. Call it in the `viewDidLoad` method of the view controller.

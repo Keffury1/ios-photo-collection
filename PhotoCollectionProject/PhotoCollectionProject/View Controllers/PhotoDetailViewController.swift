@@ -27,6 +27,20 @@ class PhotoDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    func setTheme() {
+        guard let themePreference = themeHelper?.themePreference else { return }
+        if themePreference == "Dark" {
+            self.view.backgroundColor = .lightGray
+        } else {
+            self.view.backgroundColor = .white
+        }
+    }
+    
+    func updateViews() {
+        setTheme()
+       // UNSURE HOW TO CONVERT THE PHOTO TO IMAGEVIEW
+    }
 
     /*
     // MARK: - Navigation
