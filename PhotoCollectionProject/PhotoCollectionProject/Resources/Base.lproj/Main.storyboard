@@ -78,7 +78,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="LMN-hW-PSE">
-                        <barButtonItem key="leftBarButtonItem" title="Select Theme" id="c31-yO-nMF"/>
+                        <barButtonItem key="leftBarButtonItem" title="Select Theme" id="c31-yO-nMF">
+                            <connections>
+                                <segue destination="EV7-px-eZf" kind="presentation" identifier="selectThemeModalSegue" id="fBA-p6-ELM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sRL-Mc-t89">
                             <connections>
                                 <segue destination="Nhb-cP-o2K" kind="show" identifier="addPhotoSegue" id="sq8-gp-gnJ"/>
@@ -89,6 +93,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aT9-Cq-xhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1110.144927536232" y="155.35714285714286"/>
+        </scene>
+        <!--Theme Selection View Controller-->
+        <scene sceneID="q4x-li-Pf9">
+            <objects>
+                <viewController id="wzf-VA-DN2" customClass="ThemeSelectionViewController" customModule="PhotoCollectionProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x2r-Em-NOk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="jZB-sq-F1G">
+                                <rect key="frame" x="60" y="148" width="294" height="64"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="49"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2w-SV-kbI">
+                                <rect key="frame" x="100" y="451" width="61" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Dark"/>
+                                <connections>
+                                    <action selector="selectDarkThemeTapped:" destination="wzf-VA-DN2" eventType="touchUpInside" id="rVt-Wl-RaY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Diu-lI-AnF">
+                                <rect key="frame" x="248" y="451" width="66" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Light"/>
+                                <connections>
+                                    <action selector="selectLightThemeTapped:" destination="wzf-VA-DN2" eventType="touchUpInside" id="0Hh-ci-m3U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jZB-sq-F1G" firstAttribute="top" secondItem="W9F-df-kPR" secondAttribute="top" constant="60" id="Cki-FD-dsF"/>
+                            <constraint firstItem="jZB-sq-F1G" firstAttribute="leading" secondItem="W9F-df-kPR" secondAttribute="leading" constant="60" id="P1V-Ib-Het"/>
+                            <constraint firstItem="W9F-df-kPR" firstAttribute="trailing" secondItem="jZB-sq-F1G" secondAttribute="trailing" constant="60" id="PE2-Ij-cFC"/>
+                            <constraint firstItem="Diu-lI-AnF" firstAttribute="leading" secondItem="m2w-SV-kbI" secondAttribute="trailing" constant="87" id="SLM-eN-OH0"/>
+                            <constraint firstItem="W9F-df-kPR" firstAttribute="bottom" secondItem="jZB-sq-F1G" secondAttribute="bottom" constant="650" id="aYz-Md-S5a"/>
+                            <constraint firstItem="Diu-lI-AnF" firstAttribute="centerY" secondItem="W9F-df-kPR" secondAttribute="centerY" id="e1j-2e-eMO"/>
+                            <constraint firstItem="m2w-SV-kbI" firstAttribute="centerY" secondItem="W9F-df-kPR" secondAttribute="centerY" id="edi-Qd-dBw"/>
+                            <constraint firstItem="W9F-df-kPR" firstAttribute="trailing" secondItem="Diu-lI-AnF" secondAttribute="trailing" constant="100" id="qzf-BX-fUl"/>
+                            <constraint firstItem="m2w-SV-kbI" firstAttribute="leading" secondItem="W9F-df-kPR" secondAttribute="leading" constant="100" id="uTK-CR-22h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W9F-df-kPR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="szr-5E-iQL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XN1-pK-A31" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3021.739130434783" y="697.76785714285711"/>
         </scene>
         <!--Photo Detail View Controller-->
         <scene sceneID="Nm3-16-c79">
@@ -181,6 +236,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXx-rN-5JW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2123.1884057971015" y="-19.419642857142858"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V81-On-q0w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EV7-px-eZf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j3U-Dl-9eA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wzf-VA-DN2" kind="relationship" relationship="rootViewController" id="Rap-aU-IJN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lL-b5-Viz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2111.594202898551" y="697.76785714285711"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

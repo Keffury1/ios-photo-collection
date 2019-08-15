@@ -17,6 +17,7 @@
 		375671CF2305C822008B8533 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 375671CE2305C822008B8533 /* Default-568h@2x.png */; };
 		375671D12305C8F4008B8533 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375671D02305C8F4008B8533 /* PhotosCollectionViewController.swift */; };
 		375671D32305CDD4008B8533 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375671D22305CDD4008B8533 /* PhotoDetailViewController.swift */; };
+		375671D52305D130008B8533 /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375671D42305D130008B8533 /* ThemeSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		375671CE2305C822008B8533 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		375671D02305C8F4008B8533 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		375671D22305CDD4008B8533 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		375671D42305D130008B8533 /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				375671D02305C8F4008B8533 /* PhotosCollectionViewController.swift */,
 				375671D22305CDD4008B8533 /* PhotoDetailViewController.swift */,
+				375671D42305D130008B8533 /* ThemeSelectionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				375671C92305C0A6008B8533 /* Photo.swift in Sources */,
 				375671CB2305C1D1008B8533 /* PhotoController.swift in Sources */,
 				375671CD2305C476008B8533 /* ThemeHelper.swift in Sources */,
+				375671D52305D130008B8533 /* ThemeSelectionViewController.swift in Sources */,
 				375671D12305C8F4008B8533 /* PhotosCollectionViewController.swift in Sources */,
 				375671B22305BFDB008B8533 /* AppDelegate.swift in Sources */,
 			);
